@@ -28,6 +28,7 @@
     "build": "bunchee",
     "docs:api": "typedoc --out api-doc --readme none --exclude \"**/__test__/**\" --theme minimal",
     "prepublishOnly": "pnpm run build",
+    "release": "release-it",
     "test": "vitest run",
     "test:cov": "vitest --coverage",
     "toc": "markdown-toc -i README.md"
@@ -37,6 +38,7 @@
     "bunchee": "^6.5.0",
     "execa": "^9.5.2",
     "mri": "^1.2.0",
+    "release-it": "^18.1.2",
     "tsx": "^4.19.3",
     "vitest": "^3.0.9"
   },

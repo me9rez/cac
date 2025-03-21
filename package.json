@@ -1,0 +1,50 @@
+{
+  "name": "@deepgis/cac",
+  "version": "0.0.0",
+  "description": "Simple yet powerful framework for building command-line apps.",
+  "homepage": "https://github.com/me9rez/cac",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/me9rez/cac.git"
+  },
+  "license": "MIT",
+  "author": "me9rez <1516544795@qq.com>",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bunchee",
+    "docs:api": "typedoc --out api-doc --readme none --exclude \"**/__test__/**\" --theme minimal",
+    "prepublishOnly": "pnpm run build",
+    "test": "vitest run",
+    "test:cov": "vitest --coverage",
+    "toc": "markdown-toc -i README.md"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.11",
+    "bunchee": "^6.5.0",
+    "execa": "^9.5.2",
+    "mri": "^1.2.0",
+    "tsx": "^4.19.3",
+    "vitest": "^3.0.9"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

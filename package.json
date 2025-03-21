@@ -1,6 +1,6 @@
 {
   "name": "@deepgis/cac",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Simple yet powerful framework for building command-line apps.",
   "homepage": "https://github.com/me9rez/cac",
   "repository": {
